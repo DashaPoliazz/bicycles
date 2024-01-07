@@ -1,4 +1,5 @@
-import LRU from "@code/LRU";
+import { ILRU } from "global";
+import LRU from "../day1/LRU";
 
 test("LRU", function () {
     const lru = new LRU<string, number>(3) as ILRU<string, number>;
@@ -25,4 +26,3 @@ test("LRU", function () {
     // front of the list, so baz became the end
     expect(lru.get("baz")).toEqual(undefined);
 });
-
