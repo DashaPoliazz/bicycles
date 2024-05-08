@@ -1,7 +1,6 @@
 [workspace]
 members = [
-	"algorithms/sortings/bubble_sort",
-	"algorithms/sortings/quick_sort",
+	"algoritms/bubble_sort", "algoritms/merge_sort", "algoritms/quick_sort",
 ]
 
 [package]
