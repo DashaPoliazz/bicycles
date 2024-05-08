@@ -1,0 +1,11 @@
+[workspace]
+members = [
+	"algorithms/sortings/bubble_sort",
+	"algorithms/sortings/quick_sort",
+]
+
+[package]
+name = "bicycles"
+version = "0.1.0"
+edition = "2021"
+# Other package metadata
