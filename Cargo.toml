@@ -1,6 +1,6 @@
 [workspace]
 members = [
-	"algoritms/bubble_sort", "algoritms/merge_sort", "algoritms/quick_sort", "data_structures/binary_tree", "data_structures/doubly_linked_list", "data_structures/singly_linked_list",
+	"algoritms/bubble_sort", "algoritms/merge_sort", "algoritms/quick_sort", "data_structures/binary_tree", "data_structures/doubly_linked_list", "data_structures/heap", "data_structures/singly_linked_list",
 ]
 
 [package]
