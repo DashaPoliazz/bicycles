@@ -117,18 +117,20 @@ mod tests {
         T: PartialOrd + Debug,
         F: Fn(&T, &T) -> bool,
     {
+        let validate_ralationship = |(child_idx, child)| {
+            let parent_idx = heap.get_parent_idx(child_idx);
+            if let Some(parent) = heap.lookup.get(parent_idx) {
+                (heap.comparator)(parent, child)
+            } else {
+                true
+            }
+        };
+
         heap.lookup
             .iter()
             .enumerate()
             .skip(1)
-            .all(|(child_idx, child)| {
-                let parent_idx = heap.get_parent_idx(child_idx);
-                if let Some(parent) = heap.lookup.get(parent_idx) {
-                    (heap.comparator)(parent, child)
-                } else {
-                    true
-                }
-            })
+            .all(validate_ralationship)
     }
 
     #[test]
